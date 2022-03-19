@@ -131,10 +131,12 @@ export CLASSPATH
 
 export PATH=/opt/apache-maven-3.8.3/bin:$PATH
 
-export PATH="/usr/local/opt/mongodb-community@4.0/bin:$PATH"
-
+# employ ustc mirror sources of homebrew
 export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
+export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
 
+# common usage replacement
 alias mv="mv -i"
 alias rm="rm -i"
 alias cp="cp -i"
@@ -143,5 +145,9 @@ alias ls="exa --color=auto"
 alias la="exa -a --color=auto"
 alias ll="exa -lh --color=auto"
 
-#brew update
-#brew upgrade
+export PATH="/usr/local/opt/go@1.16/bin:$PATH"
+export PATH="/usr/local/opt/openssl@3/bin:$PATH"
+export PATH="/usr/local/opt/go@1.16/bin:$PATH"
+
+# opam configuration
+[[ ! -r /Users/zhangzhuai/.opam/opam-init/init.zsh ]] || source /Users/zhangzhuai/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
